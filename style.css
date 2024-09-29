@@ -1,117 +1,83 @@
-
-
-body {
-  background: linear-gradient(180deg, black 40%, white);
-  display: flex;
-  justify-content: center;
-
-}
-
-section {
-
-  background: linear-gradient(180deg,white 10%, black);
-  width: 850px;
-  margin: 7px;
-  
-}
-video{
-
-  height: 200px;
-  width: 200px;
-}
-.special1{
-
-  
-  height: 200px;
-  width: 200px;
-  position:absolute;
-  margin-left: 50px;
-  margin-top: 10px;
-
-}
-.special2{
-
-  border: solid ;
-  height: 200px;
-  width: 200px;
-  position:absolute;
-  margin-left: 600px;
-  margin-top: 10px;
-}
-
-
-h1,
-h2 {
+*{
   margin: 0;
-
-
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+    
 }
 
-.g {}
-
-h1 {
-  font-size: 30px;
-  color: black;
-  display: flex;
-  justify-content: center;
+body{
+  height: 200vw;
+  background:linear-gradient(black, white);
 }
 
-h2 {
-  color:black;
-  display: flex;
-  justify-content: center;
-
-}
-
-img {
-
-  margin: 20px;
-  border-radius: 50%;
-  width: 120px;
-}
-
-p {
-
-  color: white;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-}
-
-.a {
-  display: flex;
-  justify-content: center;
-}
-a:hover{
-  background-color: grey;
-  
-}
-
-
-.d {
+main{
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  align-items: center
+  align-items: center;
+  gap: 15px;
 }
 
-a {
-  color: white;
+
+.photo{
+  height: 10rem;
+  width: 8rem;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.intro{
+  
   display: flex;
-  justify-content: space-around;
-  padding: 10px;
-  width: 200px;
-  border-radius: 5px;
-  background-color: rgb(6, 6, 6);
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.name{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(236, 33, 33);
 }
 
-.p {
-
-  padding: 10px;
-
+ol{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  
+  
+}
+a{
+  color: black;
+  background-color: white;
+  border-radius: 7%;
+  padding: 5px;
+  box-shadow: 0 0 0 0 rgba(255, 71, 84, .7);
+  animation: battement 2s infinite cubic-bezier(.66, 0, 0, 1);
+  transition: transform 2s;
 }
 
-.formulaire {
+@keyframes battement {
+  to {
+    box-shadow: 0 0 0 15px rgba(255, 71, 84, 0);
+  }
+}
 
-  color: aliceblue;
+a:hover{
+  background-color: red;
+  animation:rotating 2s linear;
+} 
+
+
+@keyframes rotating {
+  from {
+    transform: rotate(-15deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
+}
+.rotating {
+  animation: rotating 1s linear infinite;
 }
